@@ -1,1 +1,1 @@
-# QC_PS
+# Quantum Computing Codes
