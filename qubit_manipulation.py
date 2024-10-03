@@ -14,7 +14,7 @@ def circuit():
   qc.PauliX(wires = 1)
 # STEP 4 to get PSI4
   qc.CNOT(wires = [0,2])
-  
+
   return qc.state()
 
 probability_amplitudes= circuit()
@@ -22,3 +22,10 @@ basis_states = ['|000>', '|001>', '|010>', '|011>', '|100>', '|101>', '|110>', '
 
 for i in range(0 , 2**3):
     print( 'Probability amplitude for the basis state ' +  basis_states[i]  + ' is ' + str(probability_amplitudes[i]) )
+
+
+print()
+print("The circuit diagrgam for the qubit manipulation is -")  
+print(qc.draw(circuit()))  
+
+ 
